@@ -1,10 +1,16 @@
 # NBA MVP Predictor:
 
-    This project is a machine-learning based tool for predicting the NBA Most Valuable Player (MVP) award. By analyzing player statistics and historical MVP data, the goal of this predictor is to estimate the likelihood of a player winning the MVP award in a given season. It also includes data preprocessing, visualizations, and model evaluation to ensure accurate and meaningful results.
+    This project is a machine-learning based tool for predicting the NBA Most Valuable Player (MVP) award. 
+    By analyzing player statistics and historical MVP data, the goal of this predictor is to estimate
+    the likelihood of a player winning the MVP award in a given season. 
+    It also includes data preprocessing, visualizations, and model evaluation to ensure accurate and meaningful results.
 
-    This project serves as a learning opportunity for me to explore and implement various machine learning algorithms on a cleaned dataset. Additionally, it provides a place to practice and refine other machine learning technique, such as data preprocessing, data visualization, and feature engineering.
+    This project serves as a learning opportunity for me to explore and implement various machine learning algorithms on a cleaned dataset. 
+    Additionally, it provides a place to practice and refine other machine learning technique, such as data preprocessing, data visualization, and feature engineering.
 
-    This project began as an opportunity to learn and explore data preprocessing, visualization, and machine learning techniques in a real-world context through walkthroughs and resources online. I am now implementing additional models, feature engineering techniques, and custom improvements to make the predictor more accurate and adaptable.
+    This project began as an opportunity to learn and explore data preprocessing, visualization, and machine learning techniques 
+    in a real-world context through walkthroughs and resources online. 
+    I am now implementing additional models, feature engineering techniques, and custom improvements to make the predictor more accurate and adaptable.
 
 
 
