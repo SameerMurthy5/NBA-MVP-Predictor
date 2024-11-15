@@ -8,9 +8,7 @@
     This project serves as a learning opportunity for me to explore and implement various machine learning algorithms on a cleaned dataset. 
     Additionally, it provides a place to practice and refine other machine learning technique, such as data preprocessing, data visualization, and feature engineering.
 
-    This project began as an opportunity to learn and explore data preprocessing, visualization, and machine learning techniques 
-    in a real-world context through walkthroughs and resources online. 
-    I am now implementing additional models, feature engineering techniques, and custom improvements to make the predictor more accurate and adaptable.
+    This project began as an opportunity to learn and explore data preprocessing, visualization, and machine learning techniques in a real-world context through walkthroughs and resources online. I am now implementing additional models, feature engineering techniques, and custom improvements to make the predictor more accurate and adaptable.
 
 
 
