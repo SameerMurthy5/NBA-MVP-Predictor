@@ -17,9 +17,10 @@ predictors = ['Age', 'G', 'GS', 'MP', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2
                 'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 'Year', 
                 'W', 'L', 'W/L%', 'GB', 'PS/G', 'PA/G', 'SRS']
 
-# Train model and predict MVP for 2021
-model, results = train_mvp_predictor(stats, predictors)
-print("MVP Predictions for 2021:")
+# Train model and predict MVP for a year 
+year = 2016
+model, results = train_mvp_predictor(stats, predictors, year)
+print("MVP Predictions for", year, ":")
 print(results)
 
 # Backtesting
