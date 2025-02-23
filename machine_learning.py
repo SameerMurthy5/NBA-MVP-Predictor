@@ -1,4 +1,5 @@
 import pandas as pd
+import pickle;
 from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error
 
@@ -14,6 +15,12 @@ def train_mvp_predictor(stats, predictors, year=2021):
     results["Rk"] = list(range(1, results.shape[0]+1))
     results = results.sort_values("predictions", ascending=False)
     results["Predicted_Rk"] = list(range(1, results.shape[0]+1))
+
+    # save model as pkl file for deployment
+    with open('mvp_model.pkl', 'wb') as f:
+        pickle.dump(model, f)
+        print("Model saved as mvp_model.pkl")
+        
     return model, results
 
 def find_ap(combination):
