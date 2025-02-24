@@ -18,7 +18,7 @@ predictors = ['Age', 'G', 'GS', 'MP', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2
                 'W', 'L', 'W/L%', 'GB', 'PS/G', 'PA/G', 'SRS']
 
 # Train model and predict MVP for a year 
-year = 2014
+year = 2015
 model, results = train_mvp_predictor(stats, predictors, year)
 print("MVP Predictions for", year, ":")
 print(results)

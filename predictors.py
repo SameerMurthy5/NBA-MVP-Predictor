@@ -1,4 +1,5 @@
 import pandas as pd
+import pickle;
 
 def load_data():
     mvps = pd.read_csv("data_csv_files/mvps.csv")
@@ -45,6 +46,11 @@ def preprocess_data(mvps, players, teams):
     stats = stats.apply(pd.to_numeric, errors="ignore")
     stats.to_csv("data_csv_files/player_mvp_stats.csv", index=False)
     stats = stats.fillna(0)
+    
+    with open('NBA_DATA.pkl', 'wb') as f:
+        pickle.dump(stats, f)
+        print("Model saved as mvp_model.pkl")
+
     return stats
 
 
