@@ -1,5 +1,7 @@
 # NBA MVP Predictor:
-
+    ## Additions
+    3/13/25: storing model on Amazon S3 bucket and deplyed model on EC2 instance using fast API as an API endpoint to send data to frontend
+    
     This project is a machine-learning based tool for predicting the NBA Most Valuable Player (MVP) award. 
     By analyzing player statistics and historical MVP data, the goal of this predictor is to estimate
     the likelihood of a player winning the MVP award in a given season. 
