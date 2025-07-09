@@ -1,7 +1,7 @@
 import pandas as pd
-from predictors import load_data, preprocess_data
-from Data_Visualization import plot_highest_scoring_seasons, plot_highest_scoring_per_season, plot_correlation_with_share
-from machine_learning import train_mvp_predictor, backtest
+from mvp_preprocessing.predictors import load_data, preprocess_data
+from Data_Visualization.Data_Visualization import plot_highest_scoring_seasons, plot_highest_scoring_per_season, plot_correlation_with_share
+from models.machine_learning import train_mvp_predictor, backtest
 
 # Load and preprocess data
 mvps, players, teams = load_data()
@@ -18,7 +18,7 @@ predictors = ['Age', 'G', 'GS', 'MP', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2
                 'W', 'L', 'W/L%', 'GB', 'PS/G', 'PA/G', 'SRS']
 
 # Train model and predict MVP for a year 
-year = 2015
+year = 2021
 model, results = train_mvp_predictor(stats, predictors, year)
 print("MVP Predictions for", year, ":")
 print(results)

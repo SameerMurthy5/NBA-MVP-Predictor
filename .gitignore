@@ -4,3 +4,4 @@ __pycache__/
 .vscode/
 .idea/
 data_csv_files/
+MVP_EC2.pem

@@ -4,8 +4,8 @@ from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error
 
 def train_mvp_predictor(stats, predictors, year=2021):
-    train = stats[stats["Year"] < year]
-    test = stats[stats["Year"] == year]
+    train = stats[stats["Year"] < year] # data to train the model on
+    test = stats[stats["Year"] == year] # data to test the model on, predict for this year   
     model = Ridge(alpha=.1)
     model.fit(train[predictors], train["Share"])
     
@@ -16,10 +16,10 @@ def train_mvp_predictor(stats, predictors, year=2021):
     results = results.sort_values("predictions", ascending=False)
     results["Predicted_Rk"] = list(range(1, results.shape[0]+1))
 
-    # save model as pkl file for deployment
-    with open('mvp_model.pkl', 'wb') as f:
-        pickle.dump(model, f)
-        print("Model saved as mvp_model.pkl")
+    # # save model as pkl file for deployment
+    # with open('mvp_model.pkl', 'wb') as f:
+    #     pickle.dump(model, f)
+    #     print("Model saved as mvp_model.pkl")
         
     return model, results
 
@@ -42,6 +42,8 @@ def add_ranks(predictions):
     predictions["Diff"] = predictions["Rk"] - predictions["Predicted_Rk"]
     return predictions
 
+
+# start with 5 seasons 
 def backtest(stats, model, years, predictors):
     aps, all_predictions = [], []
     for year in years[5:]:
