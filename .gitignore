@@ -3,5 +3,5 @@ __pycache__/
 .DS_Store
 .vscode/
 .idea/
-data_csv_files/
+data/
 MVP_EC2.pem
