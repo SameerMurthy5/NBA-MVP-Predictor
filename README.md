@@ -1,6 +1,10 @@
 # NBA MVP Predictor:
 
-    ## Additions
+## Additions
+
+    7/10/25: adding advanced metrics to train on including (WS/48, VORP, etc) increasing model mean average precision of placing
+            the proper players in the top 5 of MVP voting by 10 %
+
     3/13/25: storing model on Amazon S3 bucket and deplyed model on EC2 instance using fast API as an API endpoint to send data to frontend
 
     This project is a machine-learning based tool for predicting the NBA Most Valuable Player (MVP) award.
