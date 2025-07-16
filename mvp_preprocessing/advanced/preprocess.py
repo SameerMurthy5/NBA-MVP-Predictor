@@ -1,4 +1,5 @@
 import pandas as pd
+import pickle
 
 years = range(1991, 2022)
 
@@ -30,11 +31,12 @@ def combine_advanced_data():
 
 
 def combine_all_data(advanced, mvp_stats):
+    mvp_stats["Player"] = mvp_stats["Player"].replace("J.J. Redick", "JJ Redick")
     combined = advanced.merge(mvp_stats, how="outer", on=["Player", "Year"])
-    combined.to_csv("data/combined.csv", index=False)
+    combined.to_csv("data/real_combined.csv", index=False)
 
 def preprocess_combined_data():
-    combined = pd.read_csv("data/combined.csv")
+    combined = pd.read_csv("data/real_combined.csv")
     print(combined.head())
     # Preprocess combined data
     combined.drop(columns=["Age_y", "Pos_y", "G_y", "GS_y"], inplace=True)
@@ -53,8 +55,4 @@ def preprocess_combined_data():
     combined = combined.fillna(0)
     # Save the preprocessed combined data
     combined.to_csv("data/combined_preprocessed.csv", index=False)
-
-
-# combined = pd.read_csv("data/combined_preprocessed.csv")
-# print(combined.columns)
 
